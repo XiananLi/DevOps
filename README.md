@@ -29,6 +29,7 @@ Deploy -> operate -> monitor
 * Staging area
 * Respository
 
+```bash
 git config --list
 git config --global user.email
 git config --global user.name
@@ -41,7 +42,14 @@ git log
 git log --author="name"
 git diff
 git diff --staged
+
+Working with Github
 git remote add origin url
+git status
+git add .
+git commit -m "Message"
+git push origin master
+```
 
 
           Distributed Version Control System
