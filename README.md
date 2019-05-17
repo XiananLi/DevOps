@@ -42,13 +42,24 @@ git log
 git log --author="name"
 git diff
 git diff --staged
-
+```
+```bash
 Working with Github
 git remote add origin url
 git status
 git add .
 git commit -m "Message"
 git push origin master
+git pull origin master
+```
+```bash
+Branch
+git branch new-branch-name      -create new branch
+git branch                      -see all branch
+git checkout branch-name        -switch to branch
+Merge other branch to master
+git checkout master
+git merge source-branch-name
 ```
 
 
