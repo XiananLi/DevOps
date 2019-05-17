@@ -60,6 +60,7 @@ git checkout branch-name        -switch to branch
 Merge other branch to master
 git checkout master
 git merge source-branch-name
+
 ```
 
 
