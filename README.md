@@ -60,6 +60,13 @@ git checkout branch-name        -switch to branch
 Merge other branch to master
 git checkout master
 git merge source-branch-name
+git checkout source-branch-name
+git push origin source-branch-name
+```
+```bash
+git reset HEAD file name        -remove from staging
+git reset HEAD~                 -remove from commit
+
 ```
 
 
@@ -73,6 +80,71 @@ git merge source-branch-name
           |             |              |
         LOCAL1         LOCAL2         LOCAL3
 ![Git](GithubWorkFlow.png)
+
+## Maven
+**What is Maven?**
+Build tool to help building projects, automates everything related to building software project.
+
+**Why need Maven?**
+Centralized location what kind of dependency you require.
+
+**Download/Install**
+https://maven.apache.org/download.cgi
+Move unzip file to directory /Applications
+```bash
+cd /Users/username
+open -e .bash_profile
+export M2_HOME=/Applications/apache-maven-version
+export PATH=$PATH:$M2_HOME/bin
+```
+close terminal
+open new terminal mvn -version
+
+**Generate Maven Project**
+* In working directory
+```bash
+mvn archetype:generate
+mvn eclipse:eclipse
+```
+* File Structure
+pom.xml -> dependencies
+main -> application code
+test -> test code
+* In put into Eclipse
+Import -> General -> Existing Project into Workspace
+
+* Maven Project Life Cycle
+    * **Validate**: validate proejct is correct, all necessary information available
+    ```bash
+    $ mvn validate
+    ```
+    * **Compile**: compile source code for the project
+     ```bash
+    $ mvn compile
+    ```
+    * **Test**: test source code using a suitable unit test framework
+     ```bash
+    $ mvn test
+    ```
+    * **Package**: take compile code and package it in its distributable format, such as Jar
+    ```bash
+    $ mvn package
+    ```
+    * **Clean**: clean all the unnecessary files
+    ```bash
+    $ mvn clean
+    ```
+    * **Install**: install package into local repository, for use as a dependency in other project locally
+    ```bash
+    $ mvn install
+    ```
+    * **Deploy**: done in build environment, copies final package to the remote repository for sharing with other developers and projects
+    ```bash
+    $ mvn deploy
+    ```
+* POM.xml: A project object model, contains all the information about project and configuration details.
+>Search package in https://mvnrepository.com/repos/central
+to find all open source/packages with all the versions. Copy paste the dependency into POM.xml file should work.
 
 ## Continuous Integration (Jenkins)
 
