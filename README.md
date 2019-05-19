@@ -147,6 +147,34 @@ Import -> General -> Existing Project into Workspace
 to find all open source/packages with all the versions. Copy paste the dependency into POM.xml file should work.
 
 ## Continuous Integration (Jenkins)
+A process of Automated Build and Automated Tests. Example: download shared code from a group, use Maven to build, then Junit to test. It helps to detect error, loacte error. Not resolve bug, but find bug quickly. Able to set up auto build from time frame.
+* **Benefit of CI**:
+    * No long and tense integration
+    * Catch error easier
+    * Don't have to wait to find out if your code work(can be done auto in setting time)
+
+* **Download and Install Jenkins**
+```bash
+https://jenkins.io/download/
+Choose Long term support Generic Java Package
+java -jar /Users/lxn/Downloads/jenkins.war --httpPort=7070
+Or default at port 8080
+```
+* **Jenkins Architecture** 
+![Git](Jenkin.png)
+    * `Jenkins job`: runnable task that are controlled and monitored by Jenkins
+    * `Slave/Node`: computers that are setup to build Projects for a Master
+        * Jenkins run separate program called `Slave Agents` on Slaves
+        * When Slaves are registered to a master, a master starts distributing the load to Slaves.
+        * Node is referring to all machines that are part of Jenkins grid, slaves and master.
+        * Executor is a single thread executing a single job on a slave, can be parallel to other executors in a slave.
+        * `Plugin` is a piece of software that extends core functionaliy of the core Jenkins Server.
+
+
+
+
+
+
 
 ## Docker Containers
 
