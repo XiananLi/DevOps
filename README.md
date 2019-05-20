@@ -170,7 +170,11 @@ Or default at port 8080
         * Executor is a single thread executing a single job on a slave, can be parallel to other executors in a slave.
         * `Plugin` is a piece of software that extends core functionaliy of the core Jenkins Server.
 
-
+* **Jenkins with Github Integration**
+```bash
+After login go to Manage Jenkins
+Available search Github Integration
+```
 
 
 
